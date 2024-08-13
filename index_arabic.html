@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.3/css/bootstrap-select.min.css">
+<link href='https://fonts.googleapis.com/css?family=Open Sans Condensed:300' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Open Sans Condensed:700' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;400;700&display=swap" rel="stylesheet">
+<link
+    href="https://www.oliverwyman.com/etc.clientlibs/oliverwymanv2/clientlibs/general-v3/resources/mmc-display-font.css"
+    rel="stylesheet" />
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.3/js/bootstrap-select.min.js"></script>   
+
+<style>
+
+.dropdown-menu {
+  --bs-dropdown-border-radius: none !important;
+}
+
+
+</style>
+
+<script src="./assets/data.js" defer></script>
+<script src="./assets/university.js" defer></script>
+<link rel="stylesheet" href="./assets/style_arabic.css" />
+<script src="./assets/script_arabic.js"></script>
+
+
+<title>Saudi Arabia’s work visa assessment tool</title>
+<link rel="icon" type="image/x-icon" href="./assets/images/icons/favicon.ico">
+
+</head>
+
+<body>
+
+  <header>
+    <div class="container fixed-nav-desk">
+      <div class="logo">
+        <img src="./assets/images/logo_MHRSD.png" alt="logo" />
+      </div>
+      <div class="menu-cont">
+        <div class="menu">
+          <div class="language">
+            <a href="" class="english" id="/">
+              <svg width="39" height="13" viewBox="0 0 39 13" fill="none" xmlns="http://www.w3.org/2000/svg" id="english">
+                <path d="M4.952 10H0.164V1.432H4.952V2.38H1.244V5.056H4.736V5.992H1.244V9.052H4.952V10ZM9.78397 3.448C10.552 3.448 11.132 3.636 11.524 4.012C11.916 4.388 12.112 4.988 12.112 5.812V10H11.068V5.884C11.068 4.852 10.588 4.336 9.62797 4.336C8.91597 4.336 8.42397 4.536 8.15197 4.936C7.87997 5.336 7.74397 5.912 7.74397 6.664V10H6.68797V3.568H7.53997L7.69597 4.444H7.75597C7.96397 4.108 8.25197 3.86 8.61997 3.7C8.98797 3.532 9.37597 3.448 9.78397 3.448ZM16.3859 3.448C16.8099 3.448 17.1899 3.528 17.5259 3.688C17.8699 3.848 18.1619 4.092 18.4019 4.42H18.4619L18.6059 3.568H19.4459V10.108C19.4459 11.028 19.2099 11.72 18.7379 12.184C18.2739 12.648 17.5499 12.88 16.5659 12.88C15.6219 12.88 14.8499 12.744 14.2499 12.472V11.5C14.8819 11.836 15.6739 12.004 16.6259 12.004C17.1779 12.004 17.6099 11.84 17.9219 11.512C18.2419 11.192 18.4019 10.752 18.4019 10.192V9.94C18.4019 9.844 18.4059 9.708 18.4139 9.532C18.4219 9.348 18.4299 9.22 18.4379 9.148H18.3899C17.9579 9.796 17.2939 10.12 16.3979 10.12C15.5659 10.12 14.9139 9.828 14.4419 9.244C13.9779 8.66 13.7459 7.844 13.7459 6.796C13.7459 5.772 13.9779 4.96 14.4419 4.36C14.9139 3.752 15.5619 3.448 16.3859 3.448ZM16.5299 4.336C15.9939 4.336 15.5779 4.552 15.2819 4.984C14.9859 5.408 14.8379 6.016 14.8379 6.808C14.8379 7.6 14.9819 8.208 15.2699 8.632C15.5579 9.048 15.9859 9.256 16.5539 9.256C17.2019 9.256 17.6739 9.084 17.9699 8.74C18.2659 8.388 18.4139 7.824 18.4139 7.048V6.796C18.4139 5.924 18.2619 5.296 17.9579 4.912C17.6539 4.528 17.1779 4.336 16.5299 4.336ZM22.5448 10H21.4888V0.879999H22.5448V10ZM25.1225 1.156C25.2825 1.156 25.4225 1.212 25.5425 1.324C25.6705 1.428 25.7345 1.596 25.7345 1.828C25.7345 2.06 25.6705 2.232 25.5425 2.344C25.4225 2.448 25.2825 2.5 25.1225 2.5C24.9465 2.5 24.7985 2.448 24.6785 2.344C24.5585 2.232 24.4985 2.06 24.4985 1.828C24.4985 1.596 24.5585 1.428 24.6785 1.324C24.7985 1.212 24.9465 1.156 25.1225 1.156ZM25.6385 3.568V10H24.5825V3.568H25.6385ZM31.8643 8.224C31.8643 8.848 31.6323 9.32 31.1683 9.64C30.7043 9.96 30.0803 10.12 29.2963 10.12C28.8483 10.12 28.4603 10.084 28.1323 10.012C27.8123 9.94 27.5283 9.84 27.2803 9.712V8.752C27.5363 8.88 27.8443 9 28.2043 9.112C28.5723 9.216 28.9443 9.268 29.3203 9.268C29.8563 9.268 30.2443 9.184 30.4843 9.016C30.7243 8.84 30.8443 8.608 30.8443 8.32C30.8443 8.16 30.8003 8.016 30.7123 7.888C30.6243 7.76 30.4643 7.632 30.2323 7.504C30.0083 7.376 29.6843 7.232 29.2603 7.072C28.8443 6.912 28.4883 6.752 28.1923 6.592C27.8963 6.432 27.6683 6.24 27.5083 6.016C27.3483 5.792 27.2683 5.504 27.2683 5.152C27.2683 4.608 27.4883 4.188 27.9283 3.892C28.3763 3.596 28.9603 3.448 29.6803 3.448C30.0723 3.448 30.4363 3.488 30.7723 3.568C31.1163 3.648 31.4363 3.752 31.7323 3.88L31.3723 4.72C31.1003 4.608 30.8163 4.512 30.5203 4.432C30.2243 4.352 29.9203 4.312 29.6083 4.312C29.1763 4.312 28.8443 4.384 28.6123 4.528C28.3883 4.664 28.2763 4.852 28.2763 5.092C28.2763 5.276 28.3283 5.428 28.4323 5.548C28.5363 5.668 28.7083 5.788 28.9483 5.908C29.1963 6.028 29.5243 6.164 29.9323 6.316C30.3403 6.468 30.6883 6.624 30.9763 6.784C31.2643 6.944 31.4843 7.14 31.6363 7.372C31.7883 7.596 31.8643 7.88 31.8643 8.224ZM34.4744 0.879999V3.556C34.4744 3.876 34.4544 4.176 34.4144 4.456H34.4864C34.6944 4.128 34.9744 3.88 35.3264 3.712C35.6864 3.544 36.0744 3.46 36.4904 3.46C37.2664 3.46 37.8504 3.648 38.2424 4.024C38.6424 4.392 38.8424 4.988 38.8424 5.812V10H37.7984V5.884C37.7984 4.852 37.3184 4.336 36.3584 4.336C35.6384 4.336 35.1424 4.54 34.8704 4.948C34.6064 5.348 34.4744 5.924 34.4744 6.676V10H33.4184V0.879999H34.4744Z" fill="black"/>
+              </svg>               
+                
+              <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="globe">
+                <path id="icon" d="M8.33333 1V15.6667M8.33333 1C6.30829 1 4.66699 4.28325 4.66699 8.33333C4.66699 12.3834 6.30829 15.6667 8.33333 15.6667M8.33333 1C10.3584 1 12.0003 4.28325 12.0003 8.33333C12.0003 12.3834 10.3584 15.6667 8.33333 15.6667M8.33333 1C4.28325 1 1 4.28325 1 8.33333M8.33333 1C12.3834 1 15.6667 4.28325 15.6667 8.33333M8.33333 15.6667C12.3834 15.6667 15.6667 12.3834 15.6667 8.33333M8.33333 15.6667C4.28325 15.6667 1 12.3834 1 8.33333M1 8.33333H15.6667M1.98133 4.66667H14.6853M1.98133 12H14.6853" stroke="black" stroke-width="0.7" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+              </svg>
+            </a>
+          </div>
+          
+          <ul class="navigation" id="arabic-nav">
+            <li><a href="#about" class="about" id="about">عن الأداة</a></li>
+            <li><a href="#criteria" class="criteria" id="criteria">معايير الأهلية</a></li>
+            <li><a href="#assessment-tool" class="tool" id="assessment-tool">أداة التحديد</a></li>
+            <li><a href="#faqs" class="faq" id="faqs">الأسئلة الشائعة</a></li>
+        </ul>
+        </div>
+        <div class="hamburger">
+          <img src="./assets/images/icons/icon-menu_b.png" alt="hamburger_icon">
+       </div>
+      </div>
+
+     <div class="menu-mobile" style="display: none;">
+        <div class="close-icon">
+          <img src="./assets/images/icons/close-btn.png" alt="close-icon" width="30px" height="30px" style="border: 0.5px solid white; border-radius: 50% 50%; padding: 5px">
+        </div>
+        <ul class="navigation-mobile">
+            <li><a href="#about" class="about" id="about">عن الأداة</a></li>
+            <li><a href="#eligibility-criteria" class="criteria" id="criteria">معايير الأهلية</a></li>
+            <li><a href="#assessment-tool" class="tool" id="assessment-tool">أداة التحديد</a></li>
+            <li><a href="#faq" class="faq" id="faqs">الأسئلة الشائعة</a></li>
+        </ul>
+
+        <div class="language">
+          <a href="" class="english" id="arabic_version">
+            <svg width="45" height="20" viewBox="0 0 39 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.952 10H0.164V1.432H4.952V2.38H1.244V5.056H4.736V5.992H1.244V9.052H4.952V10ZM9.78397 3.448C10.552 3.448 11.132 3.636 11.524 4.012C11.916 4.388 12.112 4.988 12.112 5.812V10H11.068V5.884C11.068 4.852 10.588 4.336 9.62797 4.336C8.91597 4.336 8.42397 4.536 8.15197 4.936C7.87997 5.336 7.74397 5.912 7.74397 6.664V10H6.68797V3.568H7.53997L7.69597 4.444H7.75597C7.96397 4.108 8.25197 3.86 8.61997 3.7C8.98797 3.532 9.37597 3.448 9.78397 3.448ZM16.3859 3.448C16.8099 3.448 17.1899 3.528 17.5259 3.688C17.8699 3.848 18.1619 4.092 18.4019 4.42H18.4619L18.6059 3.568H19.4459V10.108C19.4459 11.028 19.2099 11.72 18.7379 12.184C18.2739 12.648 17.5499 12.88 16.5659 12.88C15.6219 12.88 14.8499 12.744 14.2499 12.472V11.5C14.8819 11.836 15.6739 12.004 16.6259 12.004C17.1779 12.004 17.6099 11.84 17.9219 11.512C18.2419 11.192 18.4019 10.752 18.4019 10.192V9.94C18.4019 9.844 18.4059 9.708 18.4139 9.532C18.4219 9.348 18.4299 9.22 18.4379 9.148H18.3899C17.9579 9.796 17.2939 10.12 16.3979 10.12C15.5659 10.12 14.9139 9.828 14.4419 9.244C13.9779 8.66 13.7459 7.844 13.7459 6.796C13.7459 5.772 13.9779 4.96 14.4419 4.36C14.9139 3.752 15.5619 3.448 16.3859 3.448ZM16.5299 4.336C15.9939 4.336 15.5779 4.552 15.2819 4.984C14.9859 5.408 14.8379 6.016 14.8379 6.808C14.8379 7.6 14.9819 8.208 15.2699 8.632C15.5579 9.048 15.9859 9.256 16.5539 9.256C17.2019 9.256 17.6739 9.084 17.9699 8.74C18.2659 8.388 18.4139 7.824 18.4139 7.048V6.796C18.4139 5.924 18.2619 5.296 17.9579 4.912C17.6539 4.528 17.1779 4.336 16.5299 4.336ZM22.5448 10H21.4888V0.879999H22.5448V10ZM25.1225 1.156C25.2825 1.156 25.4225 1.212 25.5425 1.324C25.6705 1.428 25.7345 1.596 25.7345 1.828C25.7345 2.06 25.6705 2.232 25.5425 2.344C25.4225 2.448 25.2825 2.5 25.1225 2.5C24.9465 2.5 24.7985 2.448 24.6785 2.344C24.5585 2.232 24.4985 2.06 24.4985 1.828C24.4985 1.596 24.5585 1.428 24.6785 1.324C24.7985 1.212 24.9465 1.156 25.1225 1.156ZM25.6385 3.568V10H24.5825V3.568H25.6385ZM31.8643 8.224C31.8643 8.848 31.6323 9.32 31.1683 9.64C30.7043 9.96 30.0803 10.12 29.2963 10.12C28.8483 10.12 28.4603 10.084 28.1323 10.012C27.8123 9.94 27.5283 9.84 27.2803 9.712V8.752C27.5363 8.88 27.8443 9 28.2043 9.112C28.5723 9.216 28.9443 9.268 29.3203 9.268C29.8563 9.268 30.2443 9.184 30.4843 9.016C30.7243 8.84 30.8443 8.608 30.8443 8.32C30.8443 8.16 30.8003 8.016 30.7123 7.888C30.6243 7.76 30.4643 7.632 30.2323 7.504C30.0083 7.376 29.6843 7.232 29.2603 7.072C28.8443 6.912 28.4883 6.752 28.1923 6.592C27.8963 6.432 27.6683 6.24 27.5083 6.016C27.3483 5.792 27.2683 5.504 27.2683 5.152C27.2683 4.608 27.4883 4.188 27.9283 3.892C28.3763 3.596 28.9603 3.448 29.6803 3.448C30.0723 3.448 30.4363 3.488 30.7723 3.568C31.1163 3.648 31.4363 3.752 31.7323 3.88L31.3723 4.72C31.1003 4.608 30.8163 4.512 30.5203 4.432C30.2243 4.352 29.9203 4.312 29.6083 4.312C29.1763 4.312 28.8443 4.384 28.6123 4.528C28.3883 4.664 28.2763 4.852 28.2763 5.092C28.2763 5.276 28.3283 5.428 28.4323 5.548C28.5363 5.668 28.7083 5.788 28.9483 5.908C29.1963 6.028 29.5243 6.164 29.9323 6.316C30.3403 6.468 30.6883 6.624 30.9763 6.784C31.2643 6.944 31.4843 7.14 31.6363 7.372C31.7883 7.596 31.8643 7.88 31.8643 8.224ZM34.4744 0.879999V3.556C34.4744 3.876 34.4544 4.176 34.4144 4.456H34.4864C34.6944 4.128 34.9744 3.88 35.3264 3.712C35.6864 3.544 36.0744 3.46 36.4904 3.46C37.2664 3.46 37.8504 3.648 38.2424 4.024C38.6424 4.392 38.8424 4.988 38.8424 5.812V10H37.7984V5.884C37.7984 4.852 37.3184 4.336 36.3584 4.336C35.6384 4.336 35.1424 4.54 34.8704 4.948C34.6064 5.348 34.4744 5.924 34.4744 6.676V10H33.4184V0.879999H34.4744Z" fill="white"/>
+            </svg>
+            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8.33333 1V15.6667M8.33333 1C6.30829 1 4.66699 4.28325 4.66699 8.33333C4.66699 12.3834 6.30829 15.6667 8.33333 15.6667M8.33333 1C10.3584 1 12.0003 4.28325 12.0003 8.33333C12.0003 12.3834 10.3584 15.6667 8.33333 15.6667M8.33333 1C4.28325 1 1 4.28325 1 8.33333M8.33333 1C12.3834 1 15.6667 4.28325 15.6667 8.33333M8.33333 15.6667C12.3834 15.6667 15.6667 12.3834 15.6667 8.33333M8.33333 15.6667C4.28325 15.6667 1 12.3834 1 8.33333M1 8.33333H15.6667M1.98133 4.66667H14.6853M1.98133 12H14.6853" stroke="white" stroke-width="0.7" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>                         
+        </a>
+        </div>
+    </div>
+    </div>
+  </header>
+  <main>
+    <!-- Assessment Tool -->
+   <section class="container" id="assessment-tool">
+      <div class="welcome">
+        <h1>أداة تحديد تأشيرة العمل المناسبة في المملكة العربية السعودية</h1>  
+        <p> لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول استنكار  النشوة وتمجيد الألم نشأت بالفعل، وسأعرض لك التفاصيل لتكتشف حقيقة وأساس تلك السعادة البشرية، فلا أحد يرفض أو يكره أو يتجنب الشعور بالسعادة، ولكن بفضل هؤلاء الأشخاص الذين لا يدركون بأن السعادة لا بد أن نستشعرها بصورة أكثر عقلانية ومنطقية فيعرضهم هذا لمواجهة الظروف الأليمة، وأكرر بأنه لا يوجد من يرغب في الحب ونيل المنال ويتلذذ بالآلام، الألم هو الألم ولكن نتيجة لظروف ما قد تكمن السعاده فيما نتحمله من كد وأسي.
+        </p>
+      </div>
+
+      <!-- Occupation -->
+        <div class="dropdown dropdown-occupation">
+          <div class="border-line">
+            <h3 class="occupation-dropdown-title"> ء الأشخاص الذين لا يدركون بأن السعادة لا بد أن نستشعرها بص
+              <span>.1</span></h3>
+            <div class="flex-form" id="flex-form_occupation" >
+              <label for="select1" class="dropdown-label"><span>*</span>عنوان المهنة</label>
+              <select class="selectpicker" id="select1" title="اختر المهنة" data-width="300px" data-live-search="true" data-live-search-placeholder="يبحث" style="text-indent: 10px;" data-size="7" data-bs-spy="scroll">
+              </select>
+            </div>
+
+            <div class="desc-occupation">
+              <img src="./assets/images/icons/occupation-icon.png" alt="occupation-icon">
+              <p> يرجى متابعة الطلب. </p>
+            </div>
+  
+          </div>
+
+          <div class="submit-btn-occupation">
+            <button type="button" class="btn btn-lg btn-primary" disabled>تابع</button>
+          </div>
+        </div>
+
+      <!--Sector ADD NEW-->  
+      <div class="dropdown dropdown-sector">
+        <div class="border-line">
+          <h3 class="sector-dropdown-title">يرجى اختيار قطاع العمل <span>.2</span></h3>
+          <div class="flex-form" id="flex-form_sector">
+            <label for="select4" class="dropdown-label">عنوان القطاع</label>
+            <select class="selectpicker" id="select4" title="حدد القطاع الذي تنتمي إليه المهنة" data-width="300px">
+              <option value="group-1" id="120">Group 1</option>
+              <option value="group-2" id="121">Group 2</option>
+              <option value="group-3" id="122">Group 3</option>
+              <option value="group-4" id="123">Group 4 </option>
+              <option value="group-5" id="124">Group 5 </option>
+              <option value="group-6" id="126">Group 6 </option> 
+              <option value="group-7" id="127">Group 7 </option>
+              <option value="group-8" id="128">Group 8 </option>
+              <option value="group-9" id="129">Group 9 </option>
+              <option value="group-10" id="130">Group 10 </option>
+              <option value="group-11" id="131">Group 11</option>
+              <option value="group-12" id="132">Group 12</option>
+              <option value="group-13" id="133">Nitaqat Activity 11</option>
+              <option value="group-14" id="134">Nitaqat Activity 12</option>
+            </select>
+         </div>
+        </div>
+
+        <div class="sum-btn" id="sect">
+          <p></p>
+          <div class="sect-page-buttons">
+            <div class="back-to-last-step" id="sector">
+            <a href="#"> 
+              العودة إلى السابقة
+              <img src="./assets/images/icons/chevron-right_black.svg" alt="arrow-back" style="margin-right: 7px;" />
+            </a>
+
+            </div>
+            
+            <div class="submit-btn-sector">
+              <button type="button" class="btn btn-lg btn-primary" disabled>تابع</button>
+            </div>          
+          </div>
+       </div>
+
+       
+      </div>
+
+      <!-- Salary -->
+        <div class="input input-salary">
+          <div class="border-line">
+            <h3 class="salary-input-title"> إدخال الراتب  للمرشح <span>.3</span></h3>
+            <div class="flex-form">
+              <form action="" id="salary-form">
+                <label for="salary-input" class="input-label"><span style="margin-right: 5px;">(بالريال السعودي)</span>  الشهري </label>
+                <input type="number" id="salary-input" oninput="this.value = this.valueAsNumber" placeholder=""/>
+              </form>
+            </div>
+            <div class="desc-salary">
+              <img src="" alt="occupation-icon">
+              <p></p>
+              <span id="not-bachelor" style="display: none">Lorem ipsum dolor sit, amet consectetur adipisicing./span>
+            </div>
+          </div>
+
+          <div class="sum-btn" id="salary">
+            <p class="cumulative-points" id="salary"><span>نقطة</span> :مجموع النقاط </p>          
+            <div class="salary-page-buttons">
+              <div class="back-to-last-step" id="salary">
+                <a href="#"> 
+                  العودة السابقة
+                  <img src="./assets/images/icons/chevron-right_black.svg" alt="arrow-back" style="margin-right: 7px;" />
+                </a>
+              </div>
+              
+              <div class="submit-btn-salary">
+                <button type="button" class="btn btn-lg btn-primary" disabled>تابع</button>
+              </div>          
+            </div>
+         </div>
+
+        </div>
+
+      <!-- Education -->
+      <div class="dropdown dropdown-education">
+        <div class="border-line">
+          <h3 class="education-dropdown-title"> يرجى حول خلفية المرشح التعليمية <span>.4</span> </h3>
+          <div class="flex-form">
+            <label for="select2" class="dropdown-label">تعليم</label>
+            <select class="selectpicker" id="select2" title="اختر المستوى التعليمي" data-width="300px">
+              <option value="no-education" id="110" class="no-education"> غير حاصل على شهادة تعليمية </option>
+              <option value="high-school" id="111"> شهادة ثانوية أو ما يعادلها </option>
+              <option value="diploma" id="112"> شهادة دبلوم أو ما يعادلها </option>
+              <option value="bachelor" id="113"> درجة البكالوريوس أو ما يعادلها </option>
+              <option value="master" id="114" class="master"> درجة الماجستير أو ما يعادلها </option>
+              <option value="doctorate" id="115" class="doctorate"> درجة الدكتوراه أو ما يعادلها </option>
+            </select>
+         </div>
+          <div class="school-dd">
+            <div class="flex-form" id="flex-form_university">
+              <label for="select3" class="dropdown-label">  أو الكلية للشهادة </label>
+              <select class="selectpicker" id="select3" title=" اختر مدرستك أو كلّيّتك " data-width="300px" data-live-search="true" data-live-search-placeholder="Search" 
+              style="text-indent: 10px;" data-size="7" data-bs-spy="scroll">
+              </select> 
+            </div>
+          </div>
+          
+          <div class="desc-education">
+            <img src="" alt="education-icon" style="display: inline-block"/>
+            <p></p>
+          </div>
+        </div>
+
+        <div class="sum-btn" id="edu">
+          <p class="cumulative-points" id="edu"> <span>نقطة</span> :مجموع النقاط </p>       
+          <div class="edu-page-buttons">
+            <div class="back-to-last-step" id="education">
+              <a href="#"> 
+                العودة إلى الخطوة السابقة
+                <img src="./assets/images/icons/chevron-right_black.svg" alt="arrow-back" style="margin-right: 7px;" />
+              </a>
+            </div>
+            
+            <div class="submit-btn-education">
+              <button type="button" class="btn btn-lg btn-primary" disabled>تابع</button>
+            </div>          
+          </div>
+       </div>
+
+       
+      </div>
+
+
+      <!-- Experience -->
+      <div class="input input-experience">
+        <div class="border-line">
+          <h3 class="experience-input-title"> يرجى عدد سنوات  المرشح <span>.5</span></h3>
+          <div class="flex-form">
+            
+            <form action="" id="experience-form">
+              <label for="experience-input" class="input-label"> عدد سنوات  </label>
+              <input type="number" step="0.01" min="0" name="experience-input" id="experience-input" oninput="this.value = this.valueAsNumber" maxlength="2" placeholder=""/>
+            </form>  
+            <form action="" id="experience-months-form" style="margin-top: 20px;">
+              <label for="experience-months-input" class="input-label"> عدد أشهر الخبرة </label> <br>
+              <input type="number" step="0.01" min="0" id="experience-months-input" oninput="this.value = this.valueAsNumber" maxlength="2"  min="1" max="11" placeholder="" />
+            </form>           
+          </div>
+
+          <div class="desc-experience">
+            <img src="" alt="experience-icon">
+            <p></p>
+          </div>
+        </div>
+
+
+        <div class="sum-btn" id="experience">
+          <p class="cumulative-points" id="experience"><span>نقطة</span> :مجموع  </p>           
+
+        <div class="experience-page-buttons">
+          <div class="back-to-last-step" id="experience">
+            <a href="#"> 
+              العودة إلى الخطوة 
+              <img src="./assets/images/icons/chevron-right_black.svg" alt="arrow-back" style="margin-right: 7px;" />
+            </a>
+          </div>
+          
+          <div class="submit-btn-experience">
+            <button type="button" class="btn btn-lg btn-primary" disabled>تابع</button>
+          </div>          
+        </div>
+      </div>
+      </div>
+
+
+            <!-- High Skill Visa => Age checking -->
+            <div class="input input-age-high">
+              <div class="border-line">
+                <h3 class="age-input-title">  إدخال  المرشح  <span>.6</span></h3>
+                <div class="flex-form">
+                  <form action="" id="age-form">
+                    <label for="age-input" class="input-label"> العمر </label>
+                    <input type="number" id="age-input" oninput="this.value = this.valueAsNumber" placeholder=""/>
+                  </form>
+                </div>
+                <div class="desc-age">
+                  <img src="" alt="age-icon" />
+                  <p></p>
+                </div>
+              </div>
+      
+                <div class="sum-btn" id="age">
+                  <p></p>
+                  <div class="age-page-buttons">
+                    <div class="back-to-last-step" id="age">
+                      <a href="#"> 
+                         إلى الخطوة السابقة
+                        <img src="./assets/images/icons/chevron-right_black.svg" alt="arrow-back" style="margin-right: 7px;" />
+                      </a>      
+                    </div>
+                    
+                    <div class="submit-btn-age">
+                      <button type="button" class="btn btn-lg btn-primary" disabled>تابع</button>
+                    </div>          
+                  </div>
+               </div>
+            </div>
+
+      <!-- LOW => Age checking -->
+      <div class="input input-age">
+        <div class="border-line">
+          <h3 class="age-input-title"> يرجى إدخال عمر  <span>.2</span></h3>
+          <div class="flex-form">
+            <form action="" id="age-form">
+              <label for="age-input" class="input-label">العمر</label>
+              <input type="number" id="age-input" oninput="this.value = this.valueAsNumber" placeholder=""/>
+            </form>
+          </div>
+          <div class="desc-age">
+            <img src="" alt="age-icon" />
+            <p></p>
+          </div>
+        </div>
+
+          <div class="sum-btn" id="age">
+            <p></p>
+            <div class="age-page-buttons">
+              <div class="back-to-last-step" id="age">
+                <a href="#"> 
+                  العودة إلى الخطوة 
+                  <img src="./assets/images/icons/chevron-right_black.svg" alt="arrow-back" style="margin-right: 7px;" />
+                </a>
+              </div>
+              
+              <div class="submit-btn-age">
+                <button type="button" class="btn btn-lg btn-primary" disabled>تابع</button>
+              </div>          
+            </div>
+         </div>
+      </div>
+      
+
+       <!-- LOW => SVP checking -->
+       <div class="input input-svp">
+        <div class="border-line">
+          <h3 class="svp-title"> بنجاح؟ <b>اختبار التحقق المهارات</b>  المرشح من اجتياز <span>.3</span></h3>
+          <h3 class="svp-title-mid" style="display: none"> هل يمتلك  أو أي درجة علمية أعلى من الدبلوم <span>.3</span></h3>
+          <h3 class="svp-title-high" style="display: none"> هل يمتلك أو أي درجة علمية أعلى من الدبلوم <span>.4</span></h3>
+
+          <div class="flex-form">
+              <form id="svp-form">
+                  <label><input type="radio" name="radioName" value="no" /> لا</label>
+                  <label><input type="radio" name="radioName" value="yes" /> نعم </label> 
+              </form>
+          </div>
+          <div class="desc-svp">
+            <img src="" alt="svp-icon" />
+            <p></p>
+          </div>
+        </div>
+
+          <div class="sum-btn" id="svp">
+            <p></p>
+            <div class="svp-page-buttons">
+              <div class="back-to-last-step" id="svp">
+                <a href="#"> 
+                   إلى الخطوة السابقة
+                  <img src="./assets/images/icons/chevron-right_black.svg" alt="arrow-back" style="margin-right: 7px;" />
+                </a>
+              </div>
+              
+              <div class="submit-btn-svp">
+                <button type="button" class="btn btn-lg btn-primary" disabled>تابع</button>
+              </div>          
+            </div>
+         </div>
+      </div>     
+
+      <!-- Final -->
+      <div class="final">
+        <div class="border-line" id="final-page" style="border-bottom: none!important;">
+          <img src="./assets/images/icons/final-positive.png" alt="">
+          <h4 class="final-title"></h4>
+          <span class="move-to-mid-visa" style="display: none;">يمكنك <a href="#" id="yes-mid"> الاستمرار بتقديم طلب للحصول على التأشيرة المناسبة لذوي المهارات المتوسطة أو </a> <a href="#" onclick="window.location.reload();">إعادة التقييم بالكامل</a>, أو الخروج من التطبيق.</span>
+          <div class="final-cumulative-points">
+            <span></span>
+            <p>مجموع النقاط</p>
+          </div>
+          <div class="guarantee">
+            <p> لا تضمن الأداة النتيجة ا بالسلطات السعودية المعنية </p>
+          </div>
+          <div class="retake-btn">
+            <button type="button" class="btn btn-lg btn-primary">إعادة  التقييم</button>
+          </div>   
+        </div>
+
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="text-container" id="about">
+      <div class="container">
+          <div class="header">
+            <h1>عن الأداة</h1>  
+          </div>
+          <div class="text-content">
+            <div class="title">
+              أداة تحديد  العمل المناسبة وفقًا للمهارات - و البشرية والتنمية الاجتماعية
+            </div> <br>
+            <p class="visa-paragraph">
+              هي أداة إلكترونية متاحة عبر الإنترنت لتحديد على تأشيرة عمل بناءً على المعايير 
+              <br>
+              .المعتمدة؛ وتشمل الراتب والمؤهلات التعليمية والخبرة العملية والعمر واختبار المهارات
+            </p> <br>
+            <p class="visa-paragraph">
+              <ul class="visa-list">
+                <li>تُحدد الأداة ما إذا كان المرشح مؤهلًا للحصول على أحد أنواع  مختلف المدخلات التي 
+                  <br>
+                  المستخدم
+                </li>
+                <li>إنّ النتيجة التي تقدمها ا القبول الفعلي للطلب
+                </li>
+                <li>
+                  إنّ الأداة متاحة لجميع المهتمين، بما في ذلك الهيئات ا والموظفين، وكل من 
+                  <br>
+                   مدى أهليته للحصول على تأشيرة ما، والاطلاع على النتائج المحتملة لعملية نظام 
+                  <br>
+                  تأشيرات العمل في المملكة العربية 
+                </li>
+              </ul>
+            </p> <br>
+            <p class="visa-note">
+              لا  للطلب؛ فالموافقة النهائية على التأشيرة منوطة بالسلطات السعودية 
+            </p>
+          </div>
+      </div>
+    </section>
+
+    <!-- Eligibility Criteria -->
+    <section class="text-container" id="criteria">
+      <div class="container">
+        <div class="header">
+          <h1> معايير الأهلية </h1>  
+        </div>
+        <div class="text-content">
+          <p class="visa-paragraph fw-600">
+            يخضع جميع المرشحين  لمدى أهلية مقدم الطلب للحصول على التأشير وفقًا لمستوى 
+            <br>
+            المهارة التي تتطلبها كل مهنة
+          </p>
+          <p class="visa-paragraph">
+              <ul class="visa-list-2">
+                <li> مرتفعة
+                </li>
+                <li> متوسطة 
+                </li>
+                <li> منخفضة
+                </li>
+              </ul>
+            </p>
+          <div class="title mt-40">
+            أهلية الحصول أصحاب المهن منخفضة المهارة
+          </div>
+          <br>
+          <p class="visa-paragraph fw-600">
+            يعد كل من يمارس  الرئيسية 9 (المهن البسيطة) مؤهلًا للتقدم للحصول على تأشيرة
+            <br>
+            أصحاب المهن منخفضة المهارة
+          </p>
+          <p class="visa-paragraph">
+            <ul class="visa-list">
+              <li><span class="fw-600"> العمر:</span> لا بد أن يكون المرشح  ما بين Y X عامًا</li>
+              <li><span class="fw-600">	التحقق من المهارات:</span> 
+              تستدعي بعض الم لاختبار التحقق من المهارات. وفي هذه الحالة، ينبغي على 
+              <br>
+              المرشح ا في أحد المراكز المعترف  موطنه
+              </li>
+            </ul>
+          </p>
+          <div class="title mt-40">
+            أهلية الحصول على تأشيرة أصحاب المهن متوسطة المهارة
+          </div>
+          <br>
+          <p class="visa-paragraph fw-600">
+            يعد كل من يمارس إحدى المهن المصنّفة ضمن المجموعات على تأشيرة أصحاب 
+            <br>
+            المهن متوسطة المهارة
+          </p>
+          <p class="visa-paragraph">
+            <ul class="visa-list">
+              <li>	موظفو الدعم المكتبي </li>
+              <li>	موظفو الخدمات والمبيعات</li>
+              <li>	العمال المهرة في مجال الزراعة والغابات والثروة السمكية</li>
+              <li>	عمال الحرف اليدوية والصناعات ذات الصلة</li>
+              <li>	مشغلو المصانع والآلات وعمال التجميع</li>
+            </ul>
+          </p> <br>
+          <p class="visa-paragraph pl-20">
+            <span class="fw-600">أ. الراتب:</span> 
+            إذا كان راتب المرشح <span class="teal">2000</span> 
+    ريال سعودي فأكثر شهريًا،  على تأشيرة أصحاب المهن
+            <br>
+    متوسطة المهارة. إذا كان الراتب أقل من <span class="teal">2000</span>  ريال سعودي شهريًا، يكون المرشح مؤهلًا أصحاب 
+            <br>
+            .المهن منخفضة المهارة
+          </p>
+          
+          <p class="visa-paragraph pl-20">
+            <span class="fw-600">ب. التحقق من المهارات:</span>
+            يتعين على جميع  المصنفة ضمن هذه المجموعات الرئيسية 
+            <br>
+            الخضوع لاختبار التحقق من المهارات في أحد المراكز المعتمدة في موطنهم، بغض التي يمكن 
+            <br>
+            .الحصول عليها
+          </p>
+
+          <div class="title mt-40">
+            أهلية الحصول على تأشيرة أصحاب المهن مرتفعة المهارة
+          </div> <br>
+          <p class="visa-paragraph fw-600">
+            يعد كل من يمارس  المصنّفة ضمن المجموعات الرئيسية 1 و2 و3 مؤهلًا للتقدم للحصول على  
+            <br>
+            أصحاب المهن مرتفعة المهارة
+          </p> <br>
+          <p class="visa-paragraph">
+              <ul class="visa-list-2">
+                <li> الفنيون والمهنيون المساعدون
+                </li>
+                <li>  المتخصصون 
+                </li>
+                <li>  المديرون 
+                </li>
+              </ul>
+            </p>
+          <p class="visa-paragraph">
+            <b>الراتب:</b> إذا كان راتب المرشح يساوي أو يزيد عن الحد الأدنى لرواتب العاملين في المهن يحق <span class="number-style">.1</span>
+              <br>
+              له التقدم بطلب للحصول على تأشير المهن مرتفعة المهارة
+          </p>
+          <p class="visa-paragraph">
+            <b>نظام النقاط:</b> ينبغي على المرشح  عن 75  ليكون مؤهلًا للحصول على تأشيرة أصحاب  <span class="number-style">.2</span>
+              <br>
+              المهن مرتفعة المهارة، ما لم يتم إعفاؤه من هذا الشرط
+          </p>
+
+          <div class="ow-table">
+            <div class="ow-row bold-row" style="direction: rtl;">
+              <div class="ow-4-col">
+                <p class="noto-14"><b>النقاط</b></p>
+              </div>
+              <div class="ow-4-col">
+                <p class="noto-14"><b>0</b></p>
+              </div>
+              <div class="ow-4-col">
+                <p class="noto-14"><b>X</b></p>
+              </div>
+              <div class="ow-4-col">
+                <p class="noto-14"><b>Y</b></p>
+              </div>
+            </div>
+
+            <div class="ow-row" style="direction: rtl;">
+              <div class="ow-4-col">
+                <p class="noto-14">
+                  الراتب بالريال السعودي/شهريًا
+                </p>
+              </div>
+              <div class="ow-4-col">
+                <p class="noto-14">لا يوجد</p>
+              </div>
+              <div class="ow-4-col">
+                <p class="noto-14">يساوي أو أعلى من الحد الأدنى للأجور في </p>
+              </div>
+              <div class="ow-4-col">
+                <p class="noto-14">يساوي أو أعلى من  الاستثنائية للأجور في القطاع</p>
+              </div>
+            </div>
+
+            <div class="ow-row" style="direction: rtl;">
+              <div class="ow-4-col">
+                <p class="noto-14" style="direction: rtl;">
+                  <sup>1</sup> أعلى مؤهل تعليمي
+                </p>
+              </div>
+              <div class="ow-4-col">
+                <p class="noto-14">غير حاصل على شهادة، أو يحمل أو دبلوم أو ما يعادله</p>
+              </div>
+              <div class="ow-4-col">
+                <p class="noto-14">درجة البكالوريوس أو الماجستير أو ما </p>
+              </div>
+              <div class="ow-4-col">
+                <p class="noto-14"><sup>2</sup> جميع شهادات الدكت الجامعات المميزة</p>
+              </div>
+            </div>
+
+            <div class="ow-row" style="direction: rtl;">
+              <div class="ow-4-col">
+                <p class="noto-14">
+                  الخبرات العملية
+                </p>
+              </div>
+              <div class="ow-4-col">
+                <p class="noto-14"><sup>3</sup> أقل من ثلاث سنوات</p>
+              </div>
+              <div class="ow-4-col">
+                <p class="noto-14">ثلاث سنوات أو أكثر</p>
+              </div>
+              <div class="ow-4-col">
+                <p class="noto-14">سبع سنوات أو أكثر</p>
+              </div>
+            </div>
+
+          </div> <br>
+          <p class="visa-note" style="direction: rtl;">
+            <sup>1</sup>
+            بالنسبة للمجموعة الرئيسية 3 والمجموعة  14، لا يحصل المرشحون من حملة شهادة  العامة أو ما 
+            <br>
+            يعادلها على أي نقاط، بينم الدبلوم أو ما يعادلها على 25 نقطة، وحملة درجة ما يفوقها 
+            <br>
+            على 50 نقطة.
+          </p>
+          <p class="visa-note" style="direction: rtl;">
+            <sup>2</sup>
+            <a href="/documents/University list for drop down in tool.xlsx" class="visa-note" style="padding-left: 5px!important">يرجى الاطلاع على قائمة الجامعات المميزة هنا</a> <img src="./assets/images/icons/download.png" alt="" style="margin-bottom: 6px;">
+          </p>
+          <p class="visa-note" style="direction: rtl;">
+            <sup>3</sup>
+            يعد المرشحون الذين تخرجوا حديثًا مؤهلين للحصول على استثناء مع خفض الحد الأدنى من نقاط التأهل إلى 50 نقطة. 
+            <br>
+            وللحصول على الاستثناء، يجب أن يكون عمر المرشح أكبر من 18 عامًا وأقل من 30 عامًا.
+          </p> <br> 
+          <p class="visa-paragraph fw-600" style="direction: rtl;">
+            3. إذا لم ينجح المرشحون في تحقيق المعايير المتعلقة بالحد الأدنى من الراتب أو المطلوبة للحصول 
+            <br>
+            على تأشيرة أصحاب المهن مرتفعة المهارة، يمكنهم التقدم  أصحاب المهن متوسطة المهارة
+          </p>
+          <p class="visa-paragraph pl-20">
+            <span class="fw-600">أ. الراتب:</span> 
+            يجب أن يستوفي المرشحون المحدد لتأشيرة أصحاب المهن متوسطة المهارة، أي 
+            <span class="teal">X</span> 
+            <br>
+            .ريال سعودي شهريًا 
+          </p>
+          <p class="visa-paragraph pl-20">
+            <span class="fw-600">ب. المؤهلات العلمية:</span>
+            يجب أن يكون المرشحون حاصلون على  مكافئ كحد أدنى، أو درجات 
+            <br>
+            .أعلى من الدبلوم مثل  أو  أو الدكتوراه أو  يعادلها
+          </p>
+          <p class="visa-paragraph fw-600" style="direction: rtl;">
+            4. إذا ل في تحقيق معايير الحصول على تأشيرة أصحاب المهن  أو مرالمهارة، يمكنهم 
+            <br>
+            التقدم بطلب للحصول على تأشيرة المهارة، وذلك في حال كانوا يحملون شهادة الدبلوم أو ما 
+            <br>
+            يفوقها.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="text-container" id="faqs">
+      <div class="container">
+        <div class="header">
+          <h1>الأسئلة الشائعة  </h1>  
+        </div>
+        <div class="text-content">
+          <p class="visa-paragraph">
+            <b> ما هي أداة تحديد تأشيرة العمل المناسبة؟ <span class="number-style">.1</span> </b>
+            <br>
+            إنّ أداة العمل المناسبة وفقًا للمهارات هي أداة تهدف إلى التحقق من مدى  للحصول على أي 
+            <br>
+            نوع  التأشيرات المصنّفة وفقًا لمستوى المهارة الذي  المختلفة، وذلك بالاستناد إلى من 
+            <br>
+            معايير الأهلية، لا تضمن الأداة للطلب؛ علمًا بأنّ الموافقة النهائية منوطة بالسلطات السعودية 
+            <br>
+            .المعنية
+          </p> <br>
+          <p class="visa-paragraph">
+            <b>
+              ما هو الخيار المناسب في  الذي تخرج منه المرشح مُدرجًا في  <span class="number-style">.2</span>
+            </b> <br>
+            .يرجى اختيار "آخر" من القائمة المنسدلة   
+          </p> <br>
+          <p class="visa-paragraph">
+            <b>هل الأداة مجانية؟ <span class="number-style">.3</span></b> <br>
+            .نعم، الأداة مجانية لجميع المستخدمين   
+          </p> <br>
+          <p class="visa-paragraph">
+            <b>كيف  من أهليتي للحصول على هذه التأشيرة؟ <span class="number-style">.4</span></b> <br>
+            .<span id="go-to-criteria" class="visalink">معايير الأهلية </span> يرجى الرجوع إلى قسم  
+          </p> <br>
+          <p class="visa-paragraph">
+            <b>هل ثمة شروط تتعلق بعمر المرشح للحصول على هذه التأشيرة؟ <span class="number-style">.5</span></b> <br>
+            .بالنسبة للمهن المصنفة ضمن المجموعة الرئيسية 9، فإنّ سن العمل القانوني هو 18-58 عامًا وسن التقاعد هو 60 عامًا 
+          </p> <br>
+          <p class="visa-paragraph">
+            <b>هل يمكنني ضم أفراد الأسرة إلى طلب التأشيرة الخاص بي؟  <span class="number-style">.6</span></b> <br>
+            .إنّ طلب التأشيرة مخصص بشكل حصري للمرشحين الحاصلين على عرض عمل من المملكة العربية السعودية
+          </p> <br>
+          <p class="visa-paragraph">
+            <b>هل يمكنني تمديد هذه التأشيرة أو تجديدها بمجرد انتهاء صلاحيتها؟  <span class="number-style">.7</span></b> <br>
+            .يمكن لمقدمي الطلبات تجديد التأشيرة بمجرد انتهاء صلاحيتها. لا ينطبق خيار التمديد على هذا النوع من التأشيرات
+          </p> <br>
+          <p class="visa-paragraph">
+            ."لمزيد من المعلومات، يرجى زيارة صفحة "عن الأداة
+          </p>
+        </div>
+    </div>
+    </section>
+
+  </main>
+
+    <footer>
+      <div class="container" style="justify-content: flex-end !important">
+          <div class="all-rights-reserved"> <p>جميع الحقو البشرية والتنمية  </p><p>2023 ©</p></div>
+      </div>
+
+    </footer>
+  
+  </body>
+</html>

@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.3/css/bootstrap-select.min.css">
+<link href='https://fonts.googleapis.com/css?family=Open Sans Condensed:300' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Open Sans Condensed:700' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;400;700&display=swap" rel="stylesheet">
+<link href="https://www.oliverwyman.com/etc.clientlibs/oliverwymanv2/clientlibs/general-v3/resources/mmc-display-font.css" rel="stylesheet" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.3/js/bootstrap-select.min.js"></script>   
+
+<style>
+
+.dropdown-menu {
+  --bs-dropdown-border-radius: none !important;
+}
+
+
+</style>
+
+
+<script src="./assets/data.js" defer></script>
+<script src="./assets/university.js" defer></script>
+<link rel="stylesheet" href="./assets/style.css" />
+<script src="./assets/script.js"></script>
+
+
+<title>Saudi Arabia’s work visa assessment tool</title>
+<link rel="icon" type="image/x-icon" href="./assets/images/icons/favicon.ico">
+</head>
+
+<body>
+  
+  <header>
+    <div class="container fixed-nav-desk">
+      <div class="logo">
+        <img src="./assets/images/logo_MHRSD.png" alt="logo" />
+      </div>
+      <div class="menu-cont">
+        <div class="menu">
+          <ul class="navigation" id="english-nav">
+            <li><a href="#about" class="about" id="about">About</a></li>
+            <li><a href="#criteria" class="criteria" id="criteria">Eligibility Criteria</a></li>
+            <li><a href="#assessment-tool" class="tool" id="assessment-tool">Assessment Tool</a></li>
+            <li><a href="#faqs" class="faq" id="faqs">FAQs</a></li>
+        </ul>
+
+
+        <div class="language">
+          <a href="" class="arabic" id="arabic_version">
+            <svg width="30" height="12" viewBox="0 0 30 12" fill="none" xmlns="http://www.w3.org/2000/svg" id="arabic">
+              <path d="M5.832 9.06C5.312 9.06 4.864 8.972 4.488 8.796C4.12 8.62 3.86 8.296 3.708 7.824C3.276 7.928 2.86 7.972 2.46 7.956C2.068 7.932 1.712 7.856 1.392 7.728C1.072 7.592 0.82 7.408 0.636 7.176C0.452 6.936 0.36 6.652 0.36 6.324C0.36 5.892 0.496 5.5 0.768 5.148C1.04 4.788 1.408 4.484 1.872 4.236C2.336 3.988 2.848 3.816 3.408 3.72L3.372 2.808H4.344L4.536 6.768C4.56 7.144 4.628 7.428 4.74 7.62C4.852 7.804 5.008 7.928 5.208 7.992C5.416 8.048 5.664 8.076 5.952 8.076C6.12 8.076 6.24 8.124 6.312 8.22C6.392 8.308 6.432 8.416 6.432 8.544C6.432 8.672 6.376 8.792 6.264 8.904C6.152 9.008 6.008 9.06 5.832 9.06ZM1.308 6.168C1.308 6.352 1.38 6.504 1.524 6.624C1.676 6.744 1.868 6.832 2.1 6.888C2.332 6.944 2.576 6.972 2.832 6.972C3.096 6.972 3.34 6.952 3.564 6.912L3.456 4.716C3 4.764 2.612 4.868 2.292 5.028C1.972 5.18 1.728 5.36 1.56 5.568C1.392 5.768 1.308 5.968 1.308 6.168ZM3.768 1.428C3.6 1.428 3.456 1.372 3.336 1.26C3.224 1.14 3.168 1 3.168 0.84C3.168 0.68 3.224 0.539999 3.336 0.42C3.456 0.3 3.6 0.24 3.768 0.24C3.928 0.24 4.064 0.3 4.176 0.42C4.296 0.539999 4.356 0.68 4.356 0.84C4.356 1 4.296 1.14 4.176 1.26C4.064 1.372 3.928 1.428 3.768 1.428ZM2.124 1.428C1.956 1.428 1.812 1.372 1.692 1.26C1.58 1.14 1.524 1 1.524 0.84C1.524 0.68 1.58 0.539999 1.692 0.42C1.812 0.3 1.956 0.24 2.124 0.24C2.284 0.24 2.42 0.3 2.532 0.42C2.652 0.539999 2.712 0.68 2.712 0.84C2.712 1 2.652 1.14 2.532 1.26C2.42 1.372 2.284 1.428 2.124 1.428ZM5.83594 9.06L5.95594 8.076C6.35594 8.076 6.66794 8.048 6.89194 7.992C7.11594 7.928 7.28394 7.812 7.39594 7.644C7.51594 7.468 7.61194 7.216 7.68394 6.888C7.75594 6.56 7.84394 6.132 7.94794 5.604L8.88394 5.784C8.83594 6 8.77994 6.248 8.71594 6.528C8.65994 6.808 8.63194 7.044 8.63194 7.236C8.63194 7.356 8.63994 7.468 8.65594 7.572C8.67194 7.676 8.73194 7.764 8.83594 7.836C8.93994 7.908 9.11594 7.968 9.36394 8.016C9.61194 8.056 9.96794 8.076 10.4319 8.076C10.5999 8.076 10.7199 8.124 10.7919 8.22C10.8719 8.308 10.9119 8.416 10.9119 8.544C10.9119 8.672 10.8559 8.792 10.7439 8.904C10.6319 9.008 10.4879 9.06 10.3119 9.06C9.79194 9.06 9.38394 9.032 9.08794 8.976C8.79994 8.912 8.58394 8.824 8.43994 8.712C8.30394 8.592 8.20394 8.444 8.13994 8.268C7.90794 8.596 7.61994 8.812 7.27594 8.916C6.93994 9.012 6.45994 9.06 5.83594 9.06ZM8.85994 11.328C8.69194 11.328 8.54794 11.268 8.42794 11.148C8.31594 11.036 8.25994 10.9 8.25994 10.74C8.25994 10.58 8.31594 10.44 8.42794 10.32C8.54794 10.2 8.69194 10.14 8.85994 10.14C9.01994 10.14 9.15594 10.2 9.26794 10.32C9.38794 10.44 9.44794 10.58 9.44794 10.74C9.44794 10.9 9.38794 11.036 9.26794 11.148C9.15594 11.268 9.01994 11.328 8.85994 11.328ZM7.21594 11.328C7.04794 11.328 6.90394 11.268 6.78394 11.148C6.67194 11.036 6.61594 10.9 6.61594 10.74C6.61594 10.58 6.67194 10.44 6.78394 10.32C6.90394 10.2 7.04794 10.14 7.21594 10.14C7.37594 10.14 7.51194 10.2 7.62394 10.32C7.74394 10.44 7.80394 10.58 7.80394 10.74C7.80394 10.9 7.74394 11.036 7.62394 11.148C7.51194 11.268 7.37594 11.328 7.21594 11.328ZM10.3125 9.06L10.4325 8.076C10.8245 8.076 11.1365 8.052 11.3685 8.004C11.6005 7.956 11.7685 7.86 11.8725 7.716C11.9765 7.564 12.0285 7.34 12.0285 7.044C12.0285 6.74 11.9565 6.36 11.8125 5.904C11.6765 5.44 11.5205 4.98 11.3445 4.524L12.3165 4.164C12.4205 4.42 12.5165 4.712 12.6045 5.04C12.7005 5.368 12.7805 5.692 12.8445 6.012C12.9085 6.332 12.9405 6.612 12.9405 6.852C12.9405 7.652 12.7245 8.22 12.2925 8.556C11.8685 8.892 11.2085 9.06 10.3125 9.06ZM11.5965 11.292C11.4285 11.292 11.2845 11.232 11.1645 11.112C11.0525 11 10.9965 10.864 10.9965 10.704C10.9965 10.544 11.0525 10.404 11.1645 10.284C11.2845 10.164 11.4285 10.104 11.5965 10.104C11.7565 10.104 11.8925 10.164 12.0045 10.284C12.1245 10.404 12.1845 10.544 12.1845 10.704C12.1845 10.864 12.1245 11 12.0045 11.112C11.8925 11.232 11.7565 11.292 11.5965 11.292ZM13.5832 11.784L13.2352 10.872C14.0112 10.616 14.6152 10.312 15.0472 9.96C15.4872 9.608 15.7952 9.24 15.9712 8.856C16.1552 8.464 16.2472 8.084 16.2472 7.716C16.2472 7.324 16.1592 6.928 15.9832 6.528C15.8152 6.12 15.6272 5.736 15.4192 5.376L16.2952 4.932C16.5192 5.356 16.7072 5.764 16.8592 6.156C17.0192 6.548 17.1432 6.892 17.2312 7.188C17.3432 7.532 17.4872 7.768 17.6632 7.896C17.8472 8.016 18.0952 8.076 18.4072 8.076C18.5752 8.076 18.6952 8.124 18.7672 8.22C18.8472 8.308 18.8872 8.416 18.8872 8.544C18.8872 8.672 18.8312 8.792 18.7192 8.904C18.6072 9.008 18.4632 9.06 18.2872 9.06C17.9832 9.06 17.7272 9.012 17.5192 8.916C17.3192 8.82 17.1552 8.692 17.0272 8.532C16.9472 8.98 16.7792 9.388 16.5232 9.756C16.2672 10.124 15.9672 10.444 15.6232 10.716C15.2792 10.996 14.9272 11.224 14.5672 11.4C14.2072 11.576 13.8792 11.704 13.5832 11.784ZM18.293 9.06L18.413 8.076C18.837 8.076 19.241 8.04 19.625 7.968C20.009 7.896 20.365 7.796 20.693 7.668C20.501 7.444 20.285 7.216 20.045 6.984C19.805 6.752 19.541 6.532 19.253 6.324C19.205 6.284 19.157 6.212 19.109 6.108C19.061 6.004 19.021 5.896 18.989 5.784C18.957 5.672 18.941 5.588 18.941 5.532C18.941 5.412 19.017 5.268 19.169 5.1C19.321 4.932 19.525 4.772 19.781 4.62C20.037 4.46 20.329 4.328 20.657 4.224C20.985 4.12 21.325 4.068 21.677 4.068C22.133 4.068 22.501 4.136 22.781 4.272C23.069 4.408 23.277 4.584 23.405 4.8C23.541 5.008 23.609 5.232 23.609 5.472C23.609 5.864 23.497 6.256 23.273 6.648C23.049 7.032 22.741 7.384 22.349 7.704C22.693 7.832 23.065 7.928 23.465 7.992C23.865 8.048 24.265 8.076 24.665 8.076C24.833 8.076 24.953 8.124 25.025 8.22C25.105 8.308 25.145 8.416 25.145 8.544C25.145 8.672 25.089 8.792 24.977 8.904C24.865 9.008 24.721 9.06 24.545 9.06C24.017 9.06 23.473 9 22.913 8.88C22.361 8.752 21.869 8.56 21.437 8.304C20.997 8.536 20.509 8.72 19.973 8.856C19.445 8.992 18.885 9.06 18.293 9.06ZM19.805 5.592C20.109 5.848 20.393 6.1 20.657 6.348C20.929 6.588 21.229 6.884 21.557 7.236C21.901 7.012 22.169 6.772 22.361 6.516C22.561 6.252 22.661 5.992 22.661 5.736C22.661 5.576 22.573 5.42 22.397 5.268C22.229 5.116 21.929 5.04 21.497 5.04C21.225 5.04 20.921 5.092 20.585 5.196C20.257 5.3 19.997 5.432 19.805 5.592ZM24.5508 9.06L24.6588 8.076C25.1148 8.076 25.4348 8.032 25.6188 7.944C25.8028 7.856 25.9068 7.7 25.9308 7.476C25.9628 7.252 25.9708 6.94 25.9548 6.54L25.7268 0.431999H26.6988L26.9388 6.432C26.9628 7 26.9228 7.48 26.8188 7.872C26.7228 8.264 26.4988 8.56 26.1468 8.76C25.8028 8.96 25.2708 9.06 24.5508 9.06ZM28.772 9L28.532 0.431999H29.504L29.744 9H28.772Z" fill="black"/>
+              </svg>                 
+              
+            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="globe">
+              <path id="icon" d="M8.33333 1V15.6667M8.33333 1C6.30829 1 4.66699 4.28325 4.66699 8.33333C4.66699 12.3834 6.30829 15.6667 8.33333 15.6667M8.33333 1C10.3584 1 12.0003 4.28325 12.0003 8.33333C12.0003 12.3834 10.3584 15.6667 8.33333 15.6667M8.33333 1C4.28325 1 1 4.28325 1 8.33333M8.33333 1C12.3834 1 15.6667 4.28325 15.6667 8.33333M8.33333 15.6667C12.3834 15.6667 15.6667 12.3834 15.6667 8.33333M8.33333 15.6667C4.28325 15.6667 1 12.3834 1 8.33333M1 8.33333H15.6667M1.98133 4.66667H14.6853M1.98133 12H14.6853" stroke="black" stroke-width="0.7" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+            </svg>
+        </a>
+        </div>
+
+        </div>
+        <div class="hamburger">
+          <img src="./assets/images/icons/icon-menu_b.png" alt="hamburger_icon">
+       </div>
+      </div>
+
+     <div class="menu-mobile" style="display: none">
+      <div class="close-icon">
+        <img src="./assets/images/icons/close-btn.png" alt="close-icon" width="30px" height="30px" style="border: 0.5px solid white; border-radius: 50% 50%; padding: 5px">
+      </div>
+      <ul class="navigation-mobile">
+        <li><a href="#about" class="about" id="about">About</a></li>
+        <li><a href="#eligibility-criteria" class="criteria" id="criteria">Eligibility Criteria</a></li>
+        <li><a href="#assessment-tool" class="tool" id="assessment-tool">Assessment Tool</a></li>
+        <li><a href="#faq" class="faq" id="faqs">FAQs</a></li>
+    </ul>
+    <div class="language">
+      <a href="" class="arabic" id="arabic_version">
+        <svg width="45" height="20" viewBox="0 0 30 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5.832 9.06C5.312 9.06 4.864 8.972 4.488 8.796C4.12 8.62 3.86 8.296 3.708 7.824C3.276 7.928 2.86 7.972 2.46 7.956C2.068 7.932 1.712 7.856 1.392 7.728C1.072 7.592 0.82 7.408 0.636 7.176C0.452 6.936 0.36 6.652 0.36 6.324C0.36 5.892 0.496 5.5 0.768 5.148C1.04 4.788 1.408 4.484 1.872 4.236C2.336 3.988 2.848 3.816 3.408 3.72L3.372 2.808H4.344L4.536 6.768C4.56 7.144 4.628 7.428 4.74 7.62C4.852 7.804 5.008 7.928 5.208 7.992C5.416 8.048 5.664 8.076 5.952 8.076C6.12 8.076 6.24 8.124 6.312 8.22C6.392 8.308 6.432 8.416 6.432 8.544C6.432 8.672 6.376 8.792 6.264 8.904C6.152 9.008 6.008 9.06 5.832 9.06ZM1.308 6.168C1.308 6.352 1.38 6.504 1.524 6.624C1.676 6.744 1.868 6.832 2.1 6.888C2.332 6.944 2.576 6.972 2.832 6.972C3.096 6.972 3.34 6.952 3.564 6.912L3.456 4.716C3 4.764 2.612 4.868 2.292 5.028C1.972 5.18 1.728 5.36 1.56 5.568C1.392 5.768 1.308 5.968 1.308 6.168ZM3.768 1.428C3.6 1.428 3.456 1.372 3.336 1.26C3.224 1.14 3.168 1 3.168 0.84C3.168 0.68 3.224 0.539999 3.336 0.42C3.456 0.3 3.6 0.24 3.768 0.24C3.928 0.24 4.064 0.3 4.176 0.42C4.296 0.539999 4.356 0.68 4.356 0.84C4.356 1 4.296 1.14 4.176 1.26C4.064 1.372 3.928 1.428 3.768 1.428ZM2.124 1.428C1.956 1.428 1.812 1.372 1.692 1.26C1.58 1.14 1.524 1 1.524 0.84C1.524 0.68 1.58 0.539999 1.692 0.42C1.812 0.3 1.956 0.24 2.124 0.24C2.284 0.24 2.42 0.3 2.532 0.42C2.652 0.539999 2.712 0.68 2.712 0.84C2.712 1 2.652 1.14 2.532 1.26C2.42 1.372 2.284 1.428 2.124 1.428ZM5.83594 9.06L5.95594 8.076C6.35594 8.076 6.66794 8.048 6.89194 7.992C7.11594 7.928 7.28394 7.812 7.39594 7.644C7.51594 7.468 7.61194 7.216 7.68394 6.888C7.75594 6.56 7.84394 6.132 7.94794 5.604L8.88394 5.784C8.83594 6 8.77994 6.248 8.71594 6.528C8.65994 6.808 8.63194 7.044 8.63194 7.236C8.63194 7.356 8.63994 7.468 8.65594 7.572C8.67194 7.676 8.73194 7.764 8.83594 7.836C8.93994 7.908 9.11594 7.968 9.36394 8.016C9.61194 8.056 9.96794 8.076 10.4319 8.076C10.5999 8.076 10.7199 8.124 10.7919 8.22C10.8719 8.308 10.9119 8.416 10.9119 8.544C10.9119 8.672 10.8559 8.792 10.7439 8.904C10.6319 9.008 10.4879 9.06 10.3119 9.06C9.79194 9.06 9.38394 9.032 9.08794 8.976C8.79994 8.912 8.58394 8.824 8.43994 8.712C8.30394 8.592 8.20394 8.444 8.13994 8.268C7.90794 8.596 7.61994 8.812 7.27594 8.916C6.93994 9.012 6.45994 9.06 5.83594 9.06ZM8.85994 11.328C8.69194 11.328 8.54794 11.268 8.42794 11.148C8.31594 11.036 8.25994 10.9 8.25994 10.74C8.25994 10.58 8.31594 10.44 8.42794 10.32C8.54794 10.2 8.69194 10.14 8.85994 10.14C9.01994 10.14 9.15594 10.2 9.26794 10.32C9.38794 10.44 9.44794 10.58 9.44794 10.74C9.44794 10.9 9.38794 11.036 9.26794 11.148C9.15594 11.268 9.01994 11.328 8.85994 11.328ZM7.21594 11.328C7.04794 11.328 6.90394 11.268 6.78394 11.148C6.67194 11.036 6.61594 10.9 6.61594 10.74C6.61594 10.58 6.67194 10.44 6.78394 10.32C6.90394 10.2 7.04794 10.14 7.21594 10.14C7.37594 10.14 7.51194 10.2 7.62394 10.32C7.74394 10.44 7.80394 10.58 7.80394 10.74C7.80394 10.9 7.74394 11.036 7.62394 11.148C7.51194 11.268 7.37594 11.328 7.21594 11.328ZM10.3125 9.06L10.4325 8.076C10.8245 8.076 11.1365 8.052 11.3685 8.004C11.6005 7.956 11.7685 7.86 11.8725 7.716C11.9765 7.564 12.0285 7.34 12.0285 7.044C12.0285 6.74 11.9565 6.36 11.8125 5.904C11.6765 5.44 11.5205 4.98 11.3445 4.524L12.3165 4.164C12.4205 4.42 12.5165 4.712 12.6045 5.04C12.7005 5.368 12.7805 5.692 12.8445 6.012C12.9085 6.332 12.9405 6.612 12.9405 6.852C12.9405 7.652 12.7245 8.22 12.2925 8.556C11.8685 8.892 11.2085 9.06 10.3125 9.06ZM11.5965 11.292C11.4285 11.292 11.2845 11.232 11.1645 11.112C11.0525 11 10.9965 10.864 10.9965 10.704C10.9965 10.544 11.0525 10.404 11.1645 10.284C11.2845 10.164 11.4285 10.104 11.5965 10.104C11.7565 10.104 11.8925 10.164 12.0045 10.284C12.1245 10.404 12.1845 10.544 12.1845 10.704C12.1845 10.864 12.1245 11 12.0045 11.112C11.8925 11.232 11.7565 11.292 11.5965 11.292ZM13.5832 11.784L13.2352 10.872C14.0112 10.616 14.6152 10.312 15.0472 9.96C15.4872 9.608 15.7952 9.24 15.9712 8.856C16.1552 8.464 16.2472 8.084 16.2472 7.716C16.2472 7.324 16.1592 6.928 15.9832 6.528C15.8152 6.12 15.6272 5.736 15.4192 5.376L16.2952 4.932C16.5192 5.356 16.7072 5.764 16.8592 6.156C17.0192 6.548 17.1432 6.892 17.2312 7.188C17.3432 7.532 17.4872 7.768 17.6632 7.896C17.8472 8.016 18.0952 8.076 18.4072 8.076C18.5752 8.076 18.6952 8.124 18.7672 8.22C18.8472 8.308 18.8872 8.416 18.8872 8.544C18.8872 8.672 18.8312 8.792 18.7192 8.904C18.6072 9.008 18.4632 9.06 18.2872 9.06C17.9832 9.06 17.7272 9.012 17.5192 8.916C17.3192 8.82 17.1552 8.692 17.0272 8.532C16.9472 8.98 16.7792 9.388 16.5232 9.756C16.2672 10.124 15.9672 10.444 15.6232 10.716C15.2792 10.996 14.9272 11.224 14.5672 11.4C14.2072 11.576 13.8792 11.704 13.5832 11.784ZM18.293 9.06L18.413 8.076C18.837 8.076 19.241 8.04 19.625 7.968C20.009 7.896 20.365 7.796 20.693 7.668C20.501 7.444 20.285 7.216 20.045 6.984C19.805 6.752 19.541 6.532 19.253 6.324C19.205 6.284 19.157 6.212 19.109 6.108C19.061 6.004 19.021 5.896 18.989 5.784C18.957 5.672 18.941 5.588 18.941 5.532C18.941 5.412 19.017 5.268 19.169 5.1C19.321 4.932 19.525 4.772 19.781 4.62C20.037 4.46 20.329 4.328 20.657 4.224C20.985 4.12 21.325 4.068 21.677 4.068C22.133 4.068 22.501 4.136 22.781 4.272C23.069 4.408 23.277 4.584 23.405 4.8C23.541 5.008 23.609 5.232 23.609 5.472C23.609 5.864 23.497 6.256 23.273 6.648C23.049 7.032 22.741 7.384 22.349 7.704C22.693 7.832 23.065 7.928 23.465 7.992C23.865 8.048 24.265 8.076 24.665 8.076C24.833 8.076 24.953 8.124 25.025 8.22C25.105 8.308 25.145 8.416 25.145 8.544C25.145 8.672 25.089 8.792 24.977 8.904C24.865 9.008 24.721 9.06 24.545 9.06C24.017 9.06 23.473 9 22.913 8.88C22.361 8.752 21.869 8.56 21.437 8.304C20.997 8.536 20.509 8.72 19.973 8.856C19.445 8.992 18.885 9.06 18.293 9.06ZM19.805 5.592C20.109 5.848 20.393 6.1 20.657 6.348C20.929 6.588 21.229 6.884 21.557 7.236C21.901 7.012 22.169 6.772 22.361 6.516C22.561 6.252 22.661 5.992 22.661 5.736C22.661 5.576 22.573 5.42 22.397 5.268C22.229 5.116 21.929 5.04 21.497 5.04C21.225 5.04 20.921 5.092 20.585 5.196C20.257 5.3 19.997 5.432 19.805 5.592ZM24.5508 9.06L24.6588 8.076C25.1148 8.076 25.4348 8.032 25.6188 7.944C25.8028 7.856 25.9068 7.7 25.9308 7.476C25.9628 7.252 25.9708 6.94 25.9548 6.54L25.7268 0.431999H26.6988L26.9388 6.432C26.9628 7 26.9228 7.48 26.8188 7.872C26.7228 8.264 26.4988 8.56 26.1468 8.76C25.8028 8.96 25.2708 9.06 24.5508 9.06ZM28.772 9L28.532 0.431999H29.504L29.744 9H28.772Z" fill="white"/>
+          </svg>                          
+          <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.33333 1V15.6667M8.33333 1C6.30829 1 4.66699 4.28325 4.66699 8.33333C4.66699 12.3834 6.30829 15.6667 8.33333 15.6667M8.33333 1C10.3584 1 12.0003 4.28325 12.0003 8.33333C12.0003 12.3834 10.3584 15.6667 8.33333 15.6667M8.33333 1C4.28325 1 1 4.28325 1 8.33333M8.33333 1C12.3834 1 15.6667 4.28325 15.6667 8.33333M8.33333 15.6667C12.3834 15.6667 15.6667 12.3834 15.6667 8.33333M8.33333 15.6667C4.28325 15.6667 1 12.3834 1 8.33333M1 8.33333H15.6667M1.98133 4.66667H14.6853M1.98133 12H14.6853" stroke="white" stroke-width="0.7" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+            
+    </a>
+    </div>
+    </div>
+    </div>
+  </header>
+  <main>
+    <!-- Assessment Tool< -->
+   <section class="container" id="assessment-tool">
+      <div class="welcome">
+        <h1>Saudi Arabia’s work visa assessment tool</h1>  
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt ad fuga tempore dicta, molestias odit in perspiciatis
+          alias, minus, molestiae quod magni soluta corrupti unde ipsa quam voluptatibus tenetur temporibus. Dicta voluptatum
+          earum perspiciatis, voluptate ea aliquid magnam quae expedita excepturi officiis tempore asperiores dolor at delectus
+          corrupti ipsa dolorem repudiandae aut voluptas iusto explicabo! </p>
+      </div>
+
+      <!-- Occupation -->
+        <div class="dropdown dropdown-occupation">
+          <div class="border-line">
+            <h3 class="occupation-dropdown-title">1. Please select occupation</h3>
+            <div class="flex-form" id="flex-form_occupation" >
+              <label for="select1" class="dropdown-label">Occupation Title<span>*</span></label>
+              <select class="selectpicker" id="select1" title="Select your occupation" data-width="300px" data-live-search="true" data-live-search-placeholder="Search" style="text-indent: 10px;" data-size="7" data-bs-spy="scroll">
+              </select>
+            </div>
+
+            <div class="desc-occupation">
+              <img src="./assets/images/icons/occupation-icon.png" alt="occupation-icon">
+              <p>Please proceed with the application.</p>
+            </div>
+  
+          </div>
+
+          <div class="submit-btn-occupation">
+            <button type="button" class="btn btn-lg btn-primary" disabled>Continue</button>
+          </div>
+        </div>
+
+      <!--Sector ADD NEW-->  
+      <div class="dropdown dropdown-sector">
+        <div class="border-line">
+          <h3 class="sector-dropdown-title">2. Please select sector group</h3>
+          <div class="flex-form" id="flex-form_sector">
+            <label for="select4" class="dropdown-label">Sector Title</label>
+            <select class="selectpicker" id="select4" title="Select your sector group" data-width="300px">
+              <option value="group-1" id="120">Business, Communications, Energy/Water</option>
+              <option value="group-2" id="121">Education & Schools</option>
+              <option value="group-3" id="122">Healthcare Services</option>
+              <option value="group-4" id="123">Manufacturing, Ops Maintenance</option>
+              <option value="group-5" id="124">Retail and Hospitality</option>
+              <option value="group-6" id="126">Mining, Post, Land Transport, Security Services</option>
+              <option value="group-7" id="127">Food, Restaurants. Catering)</option>
+              <option value="group-8" id="128">Specialist Skills</option>
+              <option value="group-9" id="129">Agriculture</option>
+              <option value="group-10" id="130">Construction and Cleaning</option>
+              <option value="group-11" id="131">Government/Office Cleaning</option>
+              <option value="group-12" id="132">Domestic Cleaning</option>
+              <option value="group-13" id="133">Combined Entities</option>
+              <option value="group-14" id="134">Very Small Combined Entities</option>
+            </select>
+         </div>
+        </div>
+
+        <div class="sum-btn" id="sect">
+          <p></p>
+          <div class="sect-page-buttons">
+            <div class="back-to-last-step" id="sector">
+              <a href="#"> <img src="./assets/images/icons/back-chevron.png" alt="arrow-back" width="10px"; height="12px" style="margin-right: 7px;">Back to last step</a>
+
+            </div>
+            
+            <div class="submit-btn-sector">
+              <button type="button" class="btn btn-lg btn-primary" disabled>Continue</button>
+            </div>          
+          </div>
+       </div>
+
+       
+      </div>
+
+      <!-- Salary -->
+        <div class="input input-salary">
+          <div class="border-line">
+            <h3 class="salary-input-title">3. Please insert candidate’s proposed salary</h3>
+            <div class="flex-form">
+              <form action="" id="salary-form">
+                <label for="salary-input" class="input-label">Salary (SAR per month)</label>
+                <input type="number" id="salary-input" oninput="this.value = this.valueAsNumber" placeholder=""/>
+              </form>
+            </div>
+            <div class="desc-salary">
+              <img src="" alt="occupation-icon">
+              <p></p>
+              <span id="not-bachelor" style="display: none">Sorry, candidate does not qualifies for visa</span>
+            </div>
+          </div>
+
+          <div class="sum-btn" id="salary">
+            <p class="cumulative-points" id="salary">Cumulative points: <span>0</span> <span>point(s)</span></p>          
+            <div class="salary-page-buttons">
+              <div class="back-to-last-step" id="salary">
+  
+                <a href="#"> <img src="./assets/images/icons/back-chevron.png" alt="arrow-back" width="10px"; height="12px" style="margin-right: 7px;">Back to last step</a>
+              </div>
+              
+              <div class="submit-btn-salary">
+                <button type="button" class="btn btn-lg btn-primary" disabled>Continue</button>
+              </div>          
+            </div>
+         </div>
+
+        </div>
+
+      <!-- Education -->
+      <div class="dropdown dropdown-education">
+        <div class="border-line">
+          <h3 class="education-dropdown-title">4. Please insert candidate's education background</h3>
+          <div class="flex-form">
+            <label for="select2" class="dropdown-label">Education</label>
+            <select class="selectpicker" id="select2" title="Select your education level" data-width="300px">
+              <option value="no-education" id="110" class="no-education">No education</option>
+              <option value="high-school" id="111">High school or equivalent</option>
+              <option value="diploma" id="112">Diploma or equivalent</option>
+              <option value="bachelor" id="113">Bachelors or equivalent</option>
+              <option value="master" id="114" class="master" >Master or equivalent</option>
+              <option value="doctorate" id="115" class="doctorate">Doctorate or equivalent</option>
+            </select>
+         </div>
+          <div class="school-dd">
+            <div class="flex-form" id="flex-form_university">
+              <label for="select3" class="dropdown-label">School or College</label>
+              <select class="selectpicker" id="select3" title="Select your school or college" data-width="300px" data-live-search="true" data-live-search-placeholder="Search" 
+              style="text-indent: 10px;" data-size="7" data-bs-spy="scroll">
+              </select> 
+            </div>
+          </div>
+          
+          <div class="desc-education">
+            <img src="" alt="education-icon" style="display: inline-block"/>
+            <p></p>
+          </div>
+        </div>
+
+        <div class="sum-btn" id="edu">
+          <p class="cumulative-points" id="edu">Cumulative points: <span>0</span> <span>point(s)</span></p>          
+          <div class="edu-page-buttons">
+            <div class="back-to-last-step" id="education">
+              <a href="#"> <img src="./assets/images/icons/back-chevron.png" alt="arrow-back" width="10px"; height="12px" style="margin-right: 7px;">Back to last step</a>
+            </div>
+            
+            <div class="submit-btn-education">
+              <button type="button" class="btn btn-lg btn-primary" disabled>Continue</button>
+            </div>          
+          </div>
+       </div>
+
+       
+      </div>
+
+
+      <!-- Experience -->
+      <div class="input input-experience">
+        <div class="border-line">
+          <h3 class="experience-input-title">5. Please insert number of years of candidate's experience</h3>
+          <div class="flex-form">
+            
+            <form action="" id="experience-form">
+              <label for="experience-input" class="input-label">Year of experience</label>
+              <input type="number" step="0.01" min="0" name="experience-input" id="experience-input" oninput="this.value = this.valueAsNumber" maxlength="2" placeholder=""/>
+            </form>  
+            <form action="" id="experience-months-form" style="margin-top: 20px;">
+              <label for="experience-months-input" class="input-label">Months of experience</label> <br>
+              <input type="number" step="0.01" min="0" id="experience-months-input" oninput="this.value = this.valueAsNumber" maxlength="2"  min="1" max="11" placeholder="" />
+            </form>           
+          </div>
+
+          <div class="desc-experience">
+            <img src="" alt="experience-icon">
+            <p></p>
+          </div>
+        </div>
+
+
+        <div class="sum-btn" id="experience">
+          <p class="cumulative-points" id="experience">Cumulative points: <span>0</span> <span>point(s)</span></p>          
+
+        <div class="experience-page-buttons">
+          <div class="back-to-last-step" id="experience">
+            <a href="#"> <img src="./assets/images/icons/back-chevron.png" alt="arrow-back" width="10px"; height="12px" style="margin-right: 7px;">Back to last step</a>
+          </div>
+          
+          <div class="submit-btn-experience">
+            <button type="button" class="btn btn-lg btn-primary" disabled>Continue</button>
+          </div>          
+        </div>
+      </div>
+      </div>
+
+
+            <!-- High Skill Visa => Age checking -->
+            <div class="input input-age-high">
+              <div class="border-line">
+                <h3 class="age-input-title">6. Please enter candidate’s age</h3>
+                <div class="flex-form">
+                  <form action="" id="age-form">
+                    <label for="age-input" class="input-label">Age</label>
+                    <input type="number" id="age-input" oninput="this.value = this.valueAsNumber" placeholder=""/>
+                  </form>
+                </div>
+                <div class="desc-age">
+                  <img src="" alt="age-icon" />
+                  <p></p>
+                </div>
+              </div>
+      
+                <div class="sum-btn" id="age">
+                  <p></p>
+                  <div class="age-page-buttons">
+                    <div class="back-to-last-step" id="age">
+                      <a href="#"> <img src="./assets/images/icons/back-chevron.png" alt="arrow-back" width="10px"; height="12px" style="margin-right: 7px;">Back to last step</a>
+      
+                    </div>
+                    
+                    <div class="submit-btn-age">
+                      <button type="button" class="btn btn-lg btn-primary" disabled>Continue</button>
+                    </div>          
+                  </div>
+               </div>
+            </div>
+
+      <!-- LOW => Age checking -->
+      <div class="input input-age">
+        <div class="border-line">
+          <h3 class="age-input-title">2. Please enter candidate’s age</h3>
+          <div class="flex-form">
+            <form action="" id="age-form">
+              <label for="age-input" class="input-label">Age</label>
+              <input type="number" id="age-input" oninput="this.value = this.valueAsNumber" placeholder=""/>
+            </form>
+          </div>
+          <div class="desc-age">
+            <img src="" alt="age-icon" />
+            <p></p>
+          </div>
+        </div>
+
+          <div class="sum-btn" id="age">
+            <p></p>
+            <div class="age-page-buttons">
+              <div class="back-to-last-step" id="age">
+                <a href="#"> <img src="./assets/images/icons/back-chevron.png" alt="arrow-back" width="10px"; height="12px" style="margin-right: 7px;">Back to last step</a>
+
+              </div>
+              
+              <div class="submit-btn-age">
+                <button type="button" class="btn btn-lg btn-primary" disabled>Continue</button>
+              </div>          
+            </div>
+         </div>
+      </div>
+      
+
+       <!-- LOW => SVP checking -->
+       <div class="input input-svp">
+        <div class="border-line">
+          <h3 class="svp-title">3. Did the candidate pass the <b>Skills Verification Test (SVP)</b>?</h3>
+          <h3 class="svp-title-mid" style="display: none">3. Does the candidate have <b>relevant diploma or any degree above diploma</b>?</h3>
+          <h3 class="svp-title-high" style="display: none">4. Does the candidate have <b>relevant diploma or any degree above diploma</b>?</h3>
+
+          <div class="flex-form">
+              <form id="svp-form">
+                  <label><input type="radio" name="radioName" value="yes" /> Yes</label> 
+                  <label><input type="radio" name="radioName" value="no" /> No</label> 
+              </form>
+          </div>
+          <div class="desc-svp">
+            <img src="" alt="svp-icon" />
+            <p></p>
+          </div>
+        </div>
+
+          <div class="sum-btn" id="svp">
+            <p></p>
+            <div class="svp-page-buttons">
+              <div class="back-to-last-step" id="svp">
+                <a href="#"> <img src="./assets/images/icons/back-chevron.png" alt="arrow-back" width="10px"; height="12px" style="margin-right: 7px;">Back to last step</a>
+
+              </div>
+              
+              <div class="submit-btn-svp">
+                <button type="button" class="btn btn-lg btn-primary" disabled>Continue</button>
+              </div>          
+            </div>
+         </div>
+      </div>     
+
+      <!-- Final -->
+      <div class="final">
+        <div class="border-line" id="final-page" style="border-bottom: none!important;">
+          <img src="./assets/images/icons/final-positive.png" alt="">
+          <h4 class="final-title"></h4>
+          <span class="move-to-mid-visa" style="display: none;">You may 
+           <a href="#" id="yes-mid">Continue with mid skill application</a>, <a href="#" onclick="window.location.reload();">Retake full assessment</a>, or exit the application.
+          </span>
+          <div class="final-cumulative-points">
+            <span></span>
+            <p>Cumulative points</p>
+          </div>
+          <div class="guarantee">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt doloribus cumque ipsam quo, itaque eos fuga labore
+              quidem quaerat, provident quos error at, tempore ea amet eum ratione optio alias esse iusto repudiandae. </p>
+          </div>
+          <div class="retake-btn">
+            <button type="button" class="btn btn-lg btn-primary">Retake Assessment</button>
+          </div>   
+        </div>
+
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="text-container" id="about">
+      <div class="container">
+          <div class="header">
+            <h1>About</h1>  
+          </div>
+          <div class="text-content">
+            <div class="title">
+              Skill Work Visa Assessment Tool by MHRSD
+            </div> <br>
+            <p class="visa-paragraph">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste, dolorum placeat. Ad, itaque dolore, perferendis, sequi
+              corporis mollitia expedita corrupti placeat officiis.
+            </p> <br>
+            <p class="visa-paragraph">
+              <ul class="visa-list">
+                <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident praesentium dolorem.</li>
+                <li>Lorem ipsum dolor sit ametconsectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias expedita totam voluptatem officia rerum? Velit aspernatur omnis, labore nesciunt possimus animi ut. Placeat, nesciunt aperiam?</li>
+              </ul>
+            </p> <br>
+            <p class="visa-note">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos animi obcaecati asperiores labore voluptates molestiae sed nihil repudiandae ex assumenda.
+            </p>
+          </div>
+      </div>
+    </section>
+
+    <!-- Eligibility Criteria -->
+    <section class="text-container" id="criteria">
+      <div class="container">
+        <div class="header">
+          <h1>Eligibility criteria</h1>  
+        </div>
+        <div class="text-content">
+          <p class="visa-paragraph fw-600">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, nulla!
+          </p>
+          <p class="visa-paragraph">
+            <span class="p-span">• Low</span> <span class="p-span">• Medium</span> <span class="p-span">• High</span>
+          </p>
+
+          <div class="title mt-40">
+            Lorem ipsum dolor sit, amet consectetur adipisicing.
+          </div>
+          <br>
+          <p class="visa-paragraph fw-600">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse voluptas eum architecto eligendi. Cupiditate, quos?
+          </p>
+          <p class="visa-paragraph">
+            <ul class="visa-list">
+              <li><span class="fw-600">Age:</span> Lorem ipsum dolor sit amet consectetur</li>
+              <li><span class="fw-600">Skills verification:</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias ad recusandae iure, officia laboriosam quia?</li>
+            </ul>
+          </p>
+
+          <div class="title mt-40">
+            Lorem ipsum dolor sit amet.
+          </div>
+          <br>
+          <p class="visa-paragraph fw-600">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, sint?
+          </p>
+          <p class="visa-paragraph">
+            <ul class="visa-list">
+              <!-- <li>Technicians and associate professionals</li> -->
+              <li>Lorem, ipsum dolor.</li>
+              <li>Lorem ipsum dolor sit.</li>
+              <li>Lorem ipsum dolor sit amet consectetur.</li>
+              <li>Lorem ipsum dolor sit amet.</li>
+              <li>Lorem ipsum dolor sit amet consectetur.</li>
+            </ul>
+          </p> <br>
+          <p class="visa-paragraph pl-20">
+            a. <span class="fw-600">Lorem:</span> Lorem ipsum dolor sit, amet consectetur adipisicing. <span class="teal">X</span> Lorem, ipsum dolor sit amet consectetur adipisicing. 
+           Lorem ipsum dolor sit amet: <span class="teal">X</span> ipsum dolor sit amet, consectetur adipisicing.
+          </p>
+          <p class="visa-paragraph pl-20">
+            b. <span class="fw-600">Lorem ipsum:</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit dolor, aut sed in facilis nobis ex dolores repellat dignissimos porro?
+            Ipsa, maxime. Consequatur doloribus quia eos molestiae, temporibus laborum fugit.
+          </p>
+
+          <div class="title mt-40">
+            Lorem ipsum dolor sit amet.
+          </div> <br>
+          <p class="visa-paragraph fw-600">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis alias ad error quidem, eveniet necessitatibus.
+          </p> <br>
+          <p class="visa-paragraph">
+            <span class="p-span">• Lorem1</span> <span class="p-span">• Lorem2</span> <span class="p-span">• Lorem4</span>
+          </p>
+          <p class="visa-paragraph">
+            1. <b>Lorem:</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit delectus quis alias sapiente quos quaerat eaque rem, eius molestiae non.
+          </p>
+          <p class="visa-paragraph">
+            2. <b>Lorem, ipsum:</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque dolorem nesciunt at nobis, itaque ipsum.
+          </p>
+
+          <div class="ow-table">
+            <div class="ow-row bold-row">
+              <div class="ow-4-col">
+                <p class="noto-14"><b>Lorem</b></p>
+              </div>
+              <div class="ow-4-col">
+                <p class="noto-14"><b>X</b></p>
+              </div>
+              <div class="ow-4-col">
+                <p class="noto-14"><b>Y</b></p>
+              </div>
+              <div class="ow-4-col">
+                <p class="noto-14"><b>Z</b></p>
+              </div>
+            </div>
+
+            <div class="ow-row">
+              <div class="ow-4-col">
+                <p class="noto-14">
+                  Lorem ipsum dolor sit amet.
+                </p>
+              </div>
+              <div class="ow-4-col">
+                <p class="noto-14">N/A</p>
+              </div>
+              <div class="ow-4-col">
+                <p class="noto-14">>= Min. lorem ipsum dolor sit.</p>
+              </div>
+              <div class="ow-4-col">
+                <p class="noto-14">>= Lorem ipsum dolor sits</p>
+              </div>
+            </div>
+
+            <div class="ow-row">
+              <div class="ow-4-col">
+                <p class="noto-14">
+                  Lorem ipsum dolor sit <sup>1</sup>
+                </p>
+              </div>
+              <div class="ow-4-col">
+                <p class="noto-14">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+              </div>
+              <div class="ow-4-col">
+                <p class="noto-14">Lorem ipsum dolor sit amet.</p>
+              </div>
+              <div class="ow-4-col">
+                <p class="noto-14">Lorem, ipsum dolor sit amet consectetur adipisicing elit. <sup>2</sup></p>
+              </div>
+            </div>
+
+            <div class="ow-row">
+              <div class="ow-4-col">
+                <p class="noto-14">
+                  Lorem, ipsum.
+                </p>
+              </div>
+              <div class="ow-4-col">
+                <p class="noto-14">< 3 <sup>3</sup></p>
+              </div>
+              <div class="ow-4-col">
+                <p class="noto-14">>= 3 </p>
+              </div>
+              <div class="ow-4-col">
+                <p class="noto-14">>= 7</p>
+              </div>
+            </div>
+
+          </div> <br>
+          <p class="visa-note">
+            <sup>1</sup> Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum molestias natus, placeat nobis similique quis quia voluptatum voluptatem.
+          </p>
+          <p class="visa-note">
+            <sup>2</sup><a class="visa-note" style="padding-left: 5px!important">Lorem ipsum dolor sit amet consectetur adipisicing.</a> <img src="./assets/images/icons/download.png" alt="" style="margin-bottom: 6px;">
+          </p>
+          <p class="visa-note">
+            <sup>3</sup>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis natus eos nostrum dolore neque veniam soluta sint voluptatum eaque aperiam odio eius, perspiciatis facilis. Deserunt eligendi quam doloribus quisquam esse.
+          </p> <br> 
+          <p class="visa-paragraph fw-600">
+            3. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque recusandae repellendus laboriosam corporis animi consequuntur quaerat commodi error asperiores aut.
+          </p>
+          <p class="visa-paragraph pl-20">
+            a. <span class="fw-600">Lorem:</span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint id aperiam eum fuga quo. Fuga.<span class="teal">X</span> per month
+          </p>
+          <p class="visa-paragraph pl-20">
+            b. <span class="fw-600">Lorem:</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam temporibus possimus incidunt? Excepturi ipsam molestias minus perferendis dignissimos
+            voluptatibus voluptatum.
+          </p>
+
+
+          <p class="visa-paragraph fw-600">
+            4. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit eum molestiae natus odit eveniet inventore explicabo error maiores, modi sapiente.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="text-container" id="faqs">
+      <div class="container">
+        <div class="header">
+          <h1>FAQs</h1>  
+        </div>
+        <div class="text-content">
+          <p class="visa-paragraph">
+            <b>1. Lorem ipsum dolor sit amet?</b> <br>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea reiciendis, itaque architecto dignissimos perspiciatis, vel animi aliquid at quaerat sunt modi doloremque dolores harum! Molestiae quo exercitationem excepturi provident qui?
+          </p> <br>
+          <p class="visa-paragraph">
+            <b>2. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum, veritatis?</b> <br>
+            Lorem ipsum dolor sit amet consectetur.
+          </p> <br>
+          <p class="visa-paragraph">
+            <b>3. Lorem ipsum dolor sit?</b> <br>
+            Lorem ipsum dolor sit amet consectetur.
+          </p> <br>
+          <p class="visa-paragraph">
+            <b>4. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, voluptatem.?</b> <br>
+            Lorem, ipsum dolor <span id="go-to-criteria" class="visalink">eligibility section</span>.  
+          </p> <br>
+          <p class="visa-paragraph">
+            <b>5. Lorem ipsum dolor sit amet?</b> <br>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi, ducimus!
+          </p> <br>
+          <p class="visa-paragraph">
+            <b>6. Lorem ipsum dolor, sit amet consectetur adipisicing?</b> <br>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio, debitis.
+          </p> <br>
+          <p class="visa-paragraph">
+            <b>7. Lorem ipsum dolor sit amet consectetur adipisicing.?</b> <br>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, vero!
+          </p> <br>
+          <p class="visa-paragraph">
+            Lorem ipsum dolor sit, amet consectetur adipisicing.
+          </p>
+        </div>
+    </div>
+    </section>
+
+  </main>
+
+    <footer>
+      <div class="container">
+          <div class="all-rights-reserved">© 2023 All rights reserved<div>
+      </div>
+
+    </footer>
+  
+  </body>
+</html>
